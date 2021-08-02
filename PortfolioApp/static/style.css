@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Avenir;
+    src: url(neue-helvetica-cufonfonts/Helvetica\ Neue\ LT\ 45\ Light.ttf);
+}
+
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -5,6 +10,7 @@ html {
 
 body {
     background-color: rgb(26, 23, 20);
+    /* background-color: rgb(38, 56, 81); */
     height: 100vh;
     overflow: scroll;
     margin: 0;
@@ -12,10 +18,12 @@ body {
 
 h1 {
     color: white;
-    font-family: "Segoe UI",Arial,sans-serif;
+    font-family: Avenir;
     margin: 10px 0;
-    margin-top: 10%;
+    margin-top: 15%;
     font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* .everything {
@@ -25,7 +33,7 @@ h1 {
 } */
 
 .navbar {
-    float: right;
+    float: left;
     position: fixed;
     display: flex;
     top: 0;
@@ -40,8 +48,8 @@ h1 {
     margin-top: 0px;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(26, 23, 20 ,0.7);
-    justify-content: left;
+    background-color: rgba(26, 23, 20 ,1);
+    justify-content: center;
     width: 100%;
     /* float: left; */
   }
@@ -51,6 +59,7 @@ h1 {
     /* position: relative; */
     justify-content: center;
     margin: 0;
+
   }
   
 .navbar li a {
@@ -65,17 +74,17 @@ h1 {
   }
   
   /* Change the link color to #111 (black) on hover */
-.navbar li a:hover {
-    /* background-color: #555; */
+/* .navbar li a:hover {
     color: white;
     text-decoration: none;
-  }
+  } */
 
 p {
     margin-top: 25px;
     font-size: 21px;
     text-align: justify;
     color: white;
+    font-family: Avenir;
 
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -160,13 +169,13 @@ section p {
     bottom: 0;
     left: 0;
     background-color: #0087ca;
-    transform-origin: bottom right;
+    transform-origin: center;
     transition: transform 0.25s ease-out;
   }
   
   .hover-underline-animation:hover:after {
     transform: scaleX(1);
-    transform-origin: bottom left;
+    transform-origin: center;
   }
 
   .container {
@@ -175,18 +184,128 @@ section p {
   }
 
   /* Section Images */
-section#home {
+/* section#home {
     background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;;
-  }
+  } */
   
-  section#about {
+  /* section#projects {
     background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;;
-  }
+    background-color: rgba(0, 135, 202, 0.5);
+} */
   
-  section#service {
+  /* section#service {
     background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;;
+  } */
+  
+  /* section#contact {
+    background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
+    background-color: rgba(0, 135, 202, 0.5);
+
+} */
+
+
+input {
+    width: 50%;
+    padding: 10px 15px;
+    text-align: left;
+    margin: 0;
+    border: 0px solid;
+    /* backround-color:bisque; */
+    /* -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; */
+    /* background-color: rgb(163, 162, 162); */
+    /* background-color: #4a73a0; */
+    /* background-color: rgba(74, 115, 160, 0.7) */
+    /* background-color: rgb(50, 113, 151); */
+    /* background-color: #263851;   */
+    background-color: rgba(38, 56, 81, 0.5);
+    /* background-color: rgba(0, 135, 202, 0.5); */
+    color: white;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 50%;
+    padding: 10px 15px;
+    height: 150px;
+    margin: 0;
+    text-align: left;
+    border: 0px solid;
+    /* background-color: bisque; */
+    /* -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; */
+    /* background-color: rgb(163, 162, 162); */
+    /* background-color: #497b94; */
+    /* background-color: rgba(74, 115, 160, 0.7); */
+    /* background-color: rgb(50, 113, 151); */
+    /* background-color: #4a73a0; */
+    /* background-color: #263851; */
+    background-color: rgba(38, 56, 81, 0.5);
+    /* background-color: rgba(0, 135, 202, 0.5); */
+    /* text-decoration-color: white; */
+    color: white;
+}
+
+hr {
+    border: 0;
+    margin: 25px 5 100px;
+    clear:both;
+    display:block;
+    width: 10%;               
+    /* background-color:#2a4b5c; */
+    background-color: #0087ca;;
+    height: 3px;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgba(0, 135, 202, 0);
+    color: white;
+    text-align: center;
+    height: 200px;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 60px;
   }
   
-  section#contact {
-    background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
   }
