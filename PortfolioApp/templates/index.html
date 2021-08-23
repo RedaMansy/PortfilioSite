@@ -60,17 +60,21 @@
         <h1>Contact</h1>
         <hr>
         <p>Have a question or want to work together?</p><br>  
-        <form> 
-          <label for="fname"></label>
+        <form method="POST" action="{{url_for('home')}}">
+          {{form.csrf_token}} 
+          <label for="fname">{{form.name.label}}</label>
           <input type="text" id="fname" placeholder="Name" name="fname"><br>
-          <label for="email"></label>
+          <label for="email">{{form.name}}</label>
           <input type="text" id="email" placeholder="Email" name="email"><br>
           <label for="message"></label>
           <!-- <input type="text" class="messagebox" id="message" placeholder="Your Message" name="message"><br> -->
 
           <textarea placeholder="Your Message" type="text" name="message"></textarea>
         </form>
+        <button type="submit">SUBMIT</button>
     </div>
+
+    
 
     <div class="footer">
       <a href="#" class="fa fa-facebook"></a>
