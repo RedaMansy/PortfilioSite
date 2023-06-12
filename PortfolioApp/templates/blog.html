@@ -16,10 +16,10 @@
     <nav class=navbar>
 
         <ul>
-          <li class=hover-underline-animation><a href="../templates/index.html#home">Home</a></li>
-          <li class=hover-underline-animation><a href="../templates/index.html#projects">Projects</a></li>
-          <li class=hover-underline-animation><a href="../templates/index.html#cv">CV</a></li>
-          <li class=hover-underline-animation><a href="../templates/index.html#contact">Contact</a></li>
+          <li class=hover-underline-animation><a href="{{  url_for('index.home')  }}">Home</a></li>
+          <li class=hover-underline-animation><a href="{{ url_for('index.home') }}#projects">Projects</a></li>
+          <li class=hover-underline-animation><a href="{{ url_for('index.home') }}#cv">CV</a></li>
+          <li class=hover-underline-animation><a href="{{ url_for('index.home') }}#contact">Contact</a></li>
           <li class=hover-underline-animation><a href="../templates/blog.html">Blog</a></li>
         </ul>
     
