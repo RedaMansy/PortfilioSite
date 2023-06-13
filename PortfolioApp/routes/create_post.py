@@ -1,7 +1,9 @@
-from flask import Blueprint, redirect, url_for, render_template, request
+from flask import flash, Blueprint, redirect, url_for, render_template, request
 from flask import current_app
 from sqlmodel import Session, select
+from PortfolioApp import db
 from PortfolioApp.models import Post
+from PortfolioApp.forms import PostForm
 
 
 post_pages = Blueprint("posts", __name__)
@@ -13,13 +15,13 @@ def display_post(title: str):
 
 @post_pages.route('/create_post', methods=["GET", "POST"])
 def create_post():
+    form = PostForm()
     if request.method == "POST":
-        title = request.form.get("title")
-        content = request.form.get("content")
+        post = Post(title=form.title.data, content=form.content.data)
+        db.session.add(post)
+        db.session.commit()
+        flash("Post submitted!")
 
-        with Session(current_app.engine) as session:
-            session.add(Post(title=title, content=content))
-            session.commit()
+        return redirect(url_for("index.home"))
 
-        return redirect(url_for(".display_post", title=title))
-    return render_template("new_post.html")
+    return render_template("new_post.html", form=form)

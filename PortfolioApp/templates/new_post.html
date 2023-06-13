@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% block content %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +8,13 @@
   <title>New Post</title>
 </head>
 <body>
-  <form method="POST">
-    <label for="title">Title:</label>
-    <input type="text" name="title" id="title" />
-
-    <label for="content">Content: </label>
-    <textarea name="content" id="content"></textarea>
+  <form method="POST" action="">
+    {{ form.title.label }} {{ form.title }}
+    <!-- <input type="text" name="title" id="title" /> -->
+    {{ form.content.label }} {{ form.content }}
     
-    <input type="submit" value="Create post" />
+    {{ form.submit }}
   </form>
 </body>
+
+{% endblock content %}
