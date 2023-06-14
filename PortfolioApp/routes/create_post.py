@@ -22,6 +22,6 @@ def create_post():
         db.session.commit()
         flash("Post submitted!")
 
-        return redirect(url_for("index.home"))
+        return redirect(url_for("posts.create_post"))
 
     return render_template("new_post.html", form=form)
