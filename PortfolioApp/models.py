@@ -50,6 +50,6 @@ class SecureModelView(ModelView):
 
 admin = Admin(app, name="test", template_mode='bootstrap3')
 admin.add_view(SecureModelView(Post, db.session))
-
+admin.add_view(SecureModelView(User, db.session))
 # user_datastore = SQLAlchemyUserDatastore(db, Post)
 # security = Security(app, user_datastore)
