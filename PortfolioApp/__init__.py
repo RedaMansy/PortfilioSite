@@ -2,7 +2,8 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
-
+from flask_security import Security
+from flask_login import LoginManager
 
 
 app = Flask(__name__)
@@ -13,6 +14,10 @@ app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 # admin = Admin(app, name='microblog', template_mode='bootstrap3')
 
 db = SQLAlchemy(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+# security = Security(app, user_datastore)
 
 # admin.add_view(ModelView(db.session))
 app.app_context().push()
@@ -24,4 +29,3 @@ from .routes.blog import blog_blueprint
 app.register_blueprint(post_pages)
 app.register_blueprint(index_blueprint)
 app.register_blueprint(blog_blueprint)
-
