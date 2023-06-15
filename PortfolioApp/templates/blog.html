@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +21,20 @@
           <li class=hover-underline-animation><a href="{{ url_for('index.home') }}#projects">Projects</a></li>
           <li class=hover-underline-animation><a href="{{ url_for('index.home') }}#cv">CV</a></li>
           <li class=hover-underline-animation><a href="{{ url_for('index.home') }}#contact">Contact</a></li>
-          <li class=hover-underline-animation><a href="../templates/blog.html">Blog</a></li>
+          <li class=hover-underline-animation><a href="{{ url_for('blog.blog') }}">Blog</a></li>
         </ul>
     
               <!-- <img src="../static/images/image.png" class="float-right" width="60" height="60" style="padding: 10px;">   -->
         </nav>
-
+    {% for post in posts %}
+    <h1> {{post.title}}</h1>
+    <h3> {{post.publish_date}}</h3>
+    <p> {{post.content}} </p>
+    {% endfor %}
+    {% endblock content %}
+  
     
+  
     
 </body>
 </html>

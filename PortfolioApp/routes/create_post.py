@@ -13,9 +13,12 @@ post_pages = Blueprint("posts", __name__)
 
 
 
-@post_pages.get("/post/<string:title>")
-def display_post(title: str):
-    return "Display post page"
+# @post_pages.get("/post/<string:title>")
+@post_pages.route("/blog", methods=["GET", "POST"])
+def display_post():
+    posts = Post.query.all()
+    print(posts)
+    return render_template("blog.html", posts=posts)
 
 @post_pages.route('/create_post', methods=["GET", "POST"])
 def create_post():
