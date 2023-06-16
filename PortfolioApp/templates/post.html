@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      -->
-    <title>Blog</title>
+    <title>{{post.title}}</title>
     
     
 </head>
 <body>
-<!-- 
-    <nav class=navbar>
+
+    <!-- <nav class=navbar>
 
         <ul>
           <li class=hover-underline-animation><a href="{{  url_for('index.home')  }}">Home</a></li>
@@ -27,12 +27,10 @@
     
               <!-- <img src="../static/images/image.png" class="float-right" width="60" height="60" style="padding: 10px;">   -->
         </nav> -->
-    {% for post in posts %}
-    <!-- <a href="{{ url_for('posts.post', post_id=post.id) }}"></a> -->
-    <h1> <a href="{{ url_for('posts.post', post_id=post.id) }}">{{post.title}}</a></h1>
-    <h3> {{post.publish_date}} </h3>
-    <!-- <p> {{post.content}} </p> -->
-    {% endfor %}
+
+    <h1> {{post.title}}</h1>
+    <h3> {{post.publish_date}}</h3>
+    <p> {{post.content}} </p>
     {% endblock content %}
   
     
