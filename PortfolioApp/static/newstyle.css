@@ -8,30 +8,30 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-body {
-    background-color: rgb(26, 23, 20);
+/* body { */
+    /* background-color: rgb(26, 23, 20); */
     /* background-color: rgb(38, 56, 81); */
-    height: 100vh;
-    overflow: scroll;
-    margin: 0;
-  }
+    /* height: 100vh; */
+    /* overflow: scroll; */
+    /* margin: 0; */
+  /* } */
 
-  /* body{
+  body{
     height: 100vh;
     background: linear-gradient(
       to right,
       rgb(63, 34, 15) 0%,
-      rgb(63, 34, 15) 50%,
+      rgb(63, 34, 15) 75%,
       rgb(244, 240, 187) 50%,
       rgb(244, 240, 187) 100%
-    );
-  } */
+    )
+  }
 
 h1 {
     color: white;
     font-family: Avenir;
     margin: 10px 0;
-    margin-top: 10%;
+    margin-top: 5%;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
@@ -168,7 +168,7 @@ section p {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #0087ca;
+    color: #2c5530;
   }
   
   .hover-underline-animation:after {
@@ -179,7 +179,7 @@ section p {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: #2c5530;
     transform-origin: center;
     transition: transform 0.25s ease-out;
   }
@@ -267,7 +267,7 @@ hr {
     display:block;
     width: 10%;               
     /* background-color:#2a4b5c; */
-    background-color: #0087ca;;
+    background-color: #2c5530;;
     height: 3px;
   }
 
