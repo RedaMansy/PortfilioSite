@@ -29,6 +29,7 @@ def create_post():
     form = PostForm()
     if request.method == "POST":
         post = Post(title=form.title.data, content=form.content.data)
+        # post = Post(title=request.form.get('ckeditor'), content=form.content.data)
         db.session.add(post)
         db.session.commit()
         flash("Post submitted!")

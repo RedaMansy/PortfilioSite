@@ -1,10 +1,11 @@
 from typing import Text
 from flask_wtf import FlaskForm
+from flask_ckeditor import CKEditorField
 from wtforms import StringField, TextAreaField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import DataRequired, Length, ValidationError, Email, EqualTo, Regexp
 class PostForm(FlaskForm):
-    title = TextAreaField("Title", validators=[DataRequired()])
-    content = TextAreaField("Text", validators=[DataRequired()])
+    title = CKEditorField("Title", validators=[DataRequired()])
+    content = CKEditorField("Text", validators=[DataRequired()])
     submit = SubmitField("Post")
 
 class LoginForm(FlaskForm):

@@ -8,13 +8,23 @@
   <title>New Post</title>
 </head>
 <body>
+  
   <form method="POST" action="">
-    {{ form.title.label }} {{ form.title }}
-    <!-- <input type="text" name="title" id="title" /> -->
-    {{ form.content.label }} {{ form.content }}
+    
+    {{ form.title.label }} 
+    {{ form.title }}
+
+    {{ form.content.label }} 
+    {{ form.content }}
     
     {{ form.submit }}
+
   </form>
+
+  {{  ckeditor.load() }}
+  {{  ckeditor.config(name="content") }}
+  {{  ckeditor.config(name="title") }}
+
 </body>
 
 {% endblock content %}
