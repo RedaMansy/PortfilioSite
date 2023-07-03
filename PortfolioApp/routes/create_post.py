@@ -17,7 +17,7 @@ post_pages = Blueprint("posts", __name__)
 @post_pages.route("/blog", methods=["GET", "POST"])
 def display_posts():
     posts = Post.query.all()
-    return render_template("blog.html", posts=posts)
+    return render_template("newblog.html", posts=posts)
 
 @post_pages.route("/blogpost/<int:post_id>")
 def post(post_id):

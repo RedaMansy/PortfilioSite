@@ -49,6 +49,14 @@ section {
     width: 100%;
 }
 
+.section_title {
+  color: white;
+  text-align: left;
+  position: absolute;
+  top: 140%;
+  left: 16%;
+}
+
 /* .navbar-fixed-top.scrolled {
     background-color: #fff !important;
     transition: background-color 200ms linear;
