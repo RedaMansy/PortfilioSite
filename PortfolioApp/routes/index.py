@@ -15,7 +15,7 @@ index_blueprint = Blueprint("index", __name__)
 @index_blueprint.route('/home', methods=["GET", "POST"])
 
 def home():
-    return render_template('index.html')
+    return render_template('newnewhome.html')
 
 @login_required
 @index_blueprint.route('/login', methods=['GET', 'POST'])
@@ -37,7 +37,7 @@ def login():
 
 @index_blueprint.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('newnewhome.html')
 
 @index_blueprint.route("/logout")
 def logout():
